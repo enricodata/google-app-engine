@@ -5,16 +5,15 @@ from starlette.middleware.cors import CORSMiddleware
 import uvicorn, aiohttp, asyncio
 from io import BytesIO
 
+from fastai import *
 from fastai.vision import *
 
-
-#model_file_url = 'https://drive.google.com/uc?export=download&id=1FY2mcsuWA7g0A7GihO065mg1h6ySSs0E'
-#model_file_name = 'model'
-
-export_file_url = 'https://drive.google.com/uc?export=download&id=1t9--XlYxLr0QI11h6rOnPoRxC8CtSINq'
+export_file_url = 'https://drive.google.com/uc?export=download&id=1iey2Sjk_JEIi3puCjkOrQw8UciLmDAng'
 export_file_name = 'export.pkl'
-classes = ['angry','bored','happy','sad','thinking']
-
+classes = ['maruti-baleno','maruti-swift','maruti-wagonr', 'maruti-vitara-breeza', 'hyundai-creta', 'mahindra-scorpio'
+          , 'hyundai-elite-i20', 'maruti-dzire', 'renault-kwid', 'toyota-fortuner', 'toyota-innova', 'maruti-ertiga'
+          , 'mahindra-bolero', 'hyundai-grand-i10', 'honda-amaze', 'hyundai-verna', 'honda-city']
+#classes = ['black', 'grizzly', 'teddys']
 path = Path(__file__).parent
 
 app = Starlette()
