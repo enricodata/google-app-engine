@@ -12,4 +12,4 @@ RUN python app/server.py
 
 EXPOSE 8080
 
-CMD [“gunicorn”, “-b”, “:8080”, “–chdir”, “app/”, “main:app”]
+CMD ["python", "app/server.py", "serve"]
